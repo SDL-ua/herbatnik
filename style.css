@@ -1,0 +1,58 @@
+*
+{
+    font-family: 'Times New Roman';
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+header, footer {
+    display: flex;
+}
+
+header section {
+
+    background-color: lightgreen ;
+    color: #ff3ac6;
+    height: 140px;
+    text-align: right;
+    font-size: 160%;
+}
+
+#sekcja1 {
+    width: 65%;
+}
+#sekcja1 a.visited {
+    color: blueviolet;
+}
+
+#sekcja2 {
+    width: 35%;
+}
+
+#sekcja2 h1 {
+    margin-right: 20px;
+}
+
+main h1 {
+    color: yellow;
+}
+main iframe {
+    height: calc(100vh - 140px - 150px);
+    width: 100%; border: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: #ff3ac6 solid;
+}
+footer section {
+    background-color: lightgreen;
+    height: 150px;
+    width: 25%;
+} 

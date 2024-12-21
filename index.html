@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poradnik programowania</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <section id="sekcja1">
+            <a href="#" onclick="openContent('poradnik-html.pdf')">Poradnik HTML</a>
+            <a href="#" onclick="throwContent('https:/\/www.facebook.com/p/Bydgoski-Plastyk-100063685855668/')">Poradnik CSS</a>
+            <a href="#" onclick="openContent('https:/\/www.youtube.com/embed/TkUgdwiECEk?si=DPGdRRCecG91ETt2')">Poradnik JavaScript</a>
+            <a href="#" onclick="throwContent('https:/\/jurasza.umk.pl/kliniki/klinika-psychiatrii/')">Poradnik PHP</a>
+            <a href="#" onclick="throwContent('https:/\/www.facebook.com/p/Bydgoski-Plastyk-100063685855668/')">Poradnik artysty</a>
+            <a href="#" onclick="autysta()">Poradnik autysty</a>
+            <a href="#" onclick="openContent('poradnik-bogusi.png')">Poradnik bogusi</a>
+        </section>
+
+        <section id="sekcja2">
+            <h1>Poradniki programowania</h1>
+        </section>
+    </header>
+
+    <main>
+        <h1>Wybierz potrzebny poradnik wyzej</h1>
+    </main>
+
+    <footer>
+        <section>
+            Wykonał stronę: <em>Szymon Wdowiak</em>
+        </section>
+
+        <section>
+            Wykonał grafikę: <em>Sipailo Danylo</em>
+        </section>
+
+        <section>
+            Mój numer telefonu: 112
+        </section>
+
+        <section>
+            Służbowy numer telefonup: 800-12-00-02
+        </section>
+    </footer>
+
+    <script>
+        function openContent(fileName) {
+            event.preventDefault();
+            document.querySelector('main').innerHTML = `<iframe src="${fileName}"></iframe>`;
+        }
+
+        function throwContent(url) {
+            event.preventDefault();
+            alert('niema szans na poratunek');
+            window.location.href = url;
+        }
+
+        function autysta() {
+            event.preventDefault();
+            if (prompt('autysta? (wpisz "t" jezeli tak i "n" jezeli nie)') === 'n') {
+                document.querySelector('body').innerHTML = '<h1>nic juz nie pomoze</h1>';
+            } else {
+                alert('witamy w klubie')
+            }
+        }
+    </script>
+</body>
+</html>
